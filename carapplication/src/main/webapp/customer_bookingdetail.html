@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!-- Mirrored from themes.webmasterdriver.net/carforyou/demo/listing-classic.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Nov 2017 00:56:11 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>Easy2Go</title>
+<!--Bootstrap -->
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<!--Custome Style -->
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<!--OWL Carousel slider-->
+<link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+<link rel="stylesheet" href="css/owl.transitions.css" type="text/css">
+<!--slick-slider -->
+<link href="css/slick.css" rel="stylesheet">
+<!--bootstrap-slider -->
+<link href="css/bootstrap-slider.min.css" rel="stylesheet">
+<!--FontAwesome Font Style -->
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon-icon/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon-icon/apple-touch-icon-114-precomposed.html">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon-icon/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="images/favicon-icon/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="images/favicon-icon/favicon.png">
+<!-- Google-Font-->
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->  
+</head>
+<body>
+<section class="page-header listing_page">
+  <div class="container">
+    <div class="page-header_wrap">
+      <div class="page-heading">
+        <h1>Booking Details</h1>
+      </div>
+      <ul class="coustom-breadcrumb">
+        <li><a href="customer.html">Home</a></li>
+        <li>Booking Details</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Dark Overlay-->
+  <div class="dark-overlay"></div>
+</section>
+<br/>
+<!-- /Page Header--> 
+<body>
+  <form class="form-horizontal" ng-app="myApp" ng-controller="accountcontroller as ac"  role="form">
+
+	
+        <div class="form-group" ng-init="ac.getcustomerbookingreceiptvalues()">
+            <label for="Company Name" class="col-sm-4 control-label">Name</label>
+            <div class="col-sm-4">
+			<div class="input-group">
+              <span class="input-group-addon"></span>
+                <input type="text"  class="form-control" placeholder= "Name" ng-disabled="true" ng-value="name" />
+            </div>
+			</div>
+			</div>
+			<div class="form-group">
+            <label for="Company Name" class="col-sm-4 control-label">Car Company Name</label>
+			<div class="col-sm-4">
+			<div class="input-group">
+                 <span class="input-group-addon"></span>
+                <input type="text"  class="form-control" placeholder="Car Company Name" ng-disabled="true" ng-value="companyname" />
+            </div>
+            
+			</div>
+				</div>
+				<div class="form-group">
+            <label for="Company Name" class="col-sm-4 control-label">Pick Up Date</label>
+			<div class="col-sm-4">
+			<div class="input-group">
+                <input type="text"  class="form-control" placeholder="Pick Up date" ng-disabled="true" ng-value="pickupdate"/><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+            </div>
+
+			</div>
+				</div>
+						<div class="form-group">
+            <label for="Company Name" class="col-sm-4 control-label">Drop Off Date</label>
+			<div class="col-sm-4">
+			<div class="input-group">
+                <input type="text"  class="form-control" placeholder="Drop Off date" ng-disabled="true" ng-value="dropofdate"/><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+            </div>
+
+			</div>
+				</div>
+				 <div class="form-group">
+            <label for="Company Name" class="col-sm-4 control-label">Price</label>
+            <div class="col-sm-4">
+			<div class="input-group">
+			<span class="input-group-addon"></span>
+                <input type="text"  class="form-control" placeholder= "Price" ng-disabled="true" ng-value="price" />
+            </div>
+			</div>
+			</div>
+				
+				
+				<div class="col-sm-4"></div>
+				<button ng-click="ac.downloadreceipt()" class="btn btn-primary col-sm-offset-3">Download Receipt</button>
+				<button  ng-click="ac.attachtomail()" class="btn btn-primary col-sm-offset-3">Attach To Mail</button>
+        <!-- <input type="button" value="Compare Car" class="btn btn-primary col-sm-offset-3"   />  -->
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    
+     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+	<script
+		src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+		<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+		
+		
+		
+ <script src="app.js"></script>
+   <script src="js/ng-file-upload-shim.js"></script>
+  <script src="js/ng-file-upload.js"></script>
+  <script src="js/uploadf.js"></script>
+<script src="controller/account_controller.js"></script>
+ <script src="service/account_service.js"></script>
+ 
+ 
+ 
+</body>
+</html>

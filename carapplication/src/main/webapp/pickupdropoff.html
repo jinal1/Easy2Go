@@ -1,0 +1,70 @@
+ 
+
+
+<div>
+<br/>
+<h3 align="center">Details of Pick-up and Drop-off</h3>
+<form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label  class="col-sm-3 control-label">Pick-up location</label>
+			<div class="col-sm-6">
+  <input type="text" class="form-control"  ng-model="cc.carbooking.pickuplocation" />
+          </div>
+      {{cc.carbooking.pickuplocation}}
+      </div>
+          <div class="form-group">
+            <label  class="col-sm-3 control-label">Drop off location</label>
+			<div class="col-sm-6">
+  <input type="text" class="form-control"  ng-model="cc.carbooking.dropofflocation" />
+      </div>
+
+      </div>
+ <div class="form-group">
+            <label  class="col-sm-3 control-label">Pick-Up Date</label>
+			<div class="col-md-6">
+        <p class="input-group">
+        <div class="input-group date">
+  <input type="date" class="form-control"  ng-model="cc.carbooking.pickupdate" ><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+        </p>
+     
+      </div>
+       <div class="col-sm-3"></div>
+       </div>
+        </div>
+	   <div class="form-group">
+            <label  class="col-sm-3 control-label">Drop-off Date</label>
+			<div class="col-md-6">
+        <p class="input-group">
+        <div class="input-group date">
+  <input type="date" class="form-control"  ng-model="cc.carbooking.dropoffdate" ><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+        </p>
+       
+      </div>
+       <div class="col-sm-3"></div>
+       </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-3 control-label">Pick up Timer</label>
+            <div class="col-md-6">
+		
+            <input  type="time" class="form-control" ng-model="cc.carbooking.pickuptime" >
+           
+
+        </div>
+        </div>
+      <div class="form-group">
+            <label  class="col-sm-3 control-label">Drop off Timer</label>
+            <div class="col-md-6">
+            <input id="time1" type="time" class="form-control" ng-model="cc.carbooking.dropofftime">
+        </div>
+        </div>
+
+		  <div class="form-group">
+		 <div class="col-sm-7"></div>
+           <button  class="btn" ng-click="cc.submit2()">next</button>
+               
+        <input type="reset" value="Reset" ng-click="resetForm()" class="btn" /> <br/>
+		</div>
+   
+</form>
+</div>

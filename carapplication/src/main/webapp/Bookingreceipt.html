@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>Easy2go</title>
+<!--Bootstrap -->
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<!--Custome Style -->
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<!--OWL Carousel slider-->
+<link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+<link rel="stylesheet" href="css/owl.transitions.css" type="text/css">
+<!--slick-slider -->
+<link href="css/slick.css" rel="stylesheet">
+<!--bootstrap-slider -->
+<link href="css/bootstrap-slider.min.css" rel="stylesheet">
+<!--FontAwesome Font Style -->
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<!-- Fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon-icon/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon-icon/apple-touch-icon-114-precomposed.html">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon-icon/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="images/favicon-icon/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="images/favicon-icon/favicon.png">
+<!-- Google-Font-->
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->  
+</head>
+<body>
+<!--Header-->
+
+  
+  
+  
+</header>
+<!-- /Header --> 
+   
+ <!--  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.1.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+   
+</head>
+<body>
+	<!--Page Header-->
+	<section class="page-header profile_page">
+		<div class="container">
+			<div class="page-header_wrap">
+				<div class="page-heading">
+					<h1>Booking Receipt</h1>
+				</div>
+				<ul class="coustom-breadcrumb">
+					<li><a href="customer.html">Home</a></li>
+					<li>Booking Receipt</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Dark Overlay-->
+		<div class="dark-overlay"></div>
+	</section>
+<div>
+    <h2 align="center">Booking Register Details</h2>
+	
+    <form class="form-horizontal" ng-app="myApp" ng-controller="carcontroller as cc" role="form">	
+	
+	  <!--  <button ng-click="cc.getbookingdata()">Click here for booking data</button>-->
+	    <div class="form-group">
+	    <div ng-init="cc.getbookingdata()">
+	    	<div class="row">
+	    	 <div class="form-group">
+            <label  class="col-sm-3 control-label"> Owner Name</label>
+            <div class="col-sm-1">
+                <input type="text"  class="form-control"  ng-value="cc.name" ng-disabled="true" />
+				
+            </div>
+            <label  class=" col-sm-1 control-label"> Company Name</label>
+            <div class="col-sm-2">
+                <input type="text"  class="form-control" ng-disabled="true"  ng-value="cc.carbooking.car1.companyname" />
+				
+            </div>
+            <label  class=" col-sm-1 control-label"> Price OfCar/Day</label>
+            <div class="col-sm-1">
+                <input type="text"  class="form-control" ng-disabled="true"  ng-value="cc.carbooking.car1.price" />
+				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <br/>
+        <div class="row">
+          <label  class=" col-sm-3 control-label">Pick-up Date</label>
+            <div class="col-sm-2">
+                <input type="text"  class="form-control" ng-disabled="true"  ng-value="cc.carbooking.temppickupdate" />
+            </div>
+            
+            <label  class=" col-sm-1 control-label">Drop-Off Date</label>
+            <div class="col-sm-2">
+                <input type="text"  class="form-control" ng-disabled="true"  ng-value="cc.carbooking.tempdropoffdate" />
+				
+            </div>
+            </div>
+            <br/>
+             <label  class=" col-sm-3 control-label">Pick-Up Time</label>
+            <div class="col-sm-2">
+                <input type="text"  class="form-control" ng-disabled="true"  ng-value="cc.carbooking.pickuptime|date:'shortTime'" />
+				
+            </div>
+             <label  class=" col-sm-1 control-label">Drop-Off Time</label>
+            <div class="col-sm-2">
+                <input type="text"  class="form-control" ng-disabled="true"  ng-value="cc.carbooking.dropofftime|date:'shortTime'" />
+				
+            </div>
+            </div>
+            <br/>
+            
+        
+	    	
+<!--             <label  class="col-sm-4 control-label"> Owner Name: {{cc.name}}</label> -->
+<!--              <label  class="col-sm-2 control-label"> Comapny Name:  {{cc.carbooking.car1.companyname}}</label> -->
+<!--              <label  class="col-sm-2 control-label">Price Of Car:  {{cc.carbooking.car1.price}}</label> -->
+<!--              </div><br/> -->
+<!--              <div class="row"> -->
+<!--            <label  class="col-sm-5 control-label"> Pick-up Date: {{cc.carbooking.pickupdate}}</label> -->
+<!--            <label  class="col-sm-3 control-label"> Drop-of fDate: {{cc.carbooking.dropoffdate}}</label> -->
+<!--              </div> -->
+<!--               <div class="row"> -->
+<!--            <label  class="col-sm-4 control-label"> Pick-Up Time: <div  ng-bind="cc.carbooking.pickuptime|date:'shortTime'"></div></label> -->
+<!--            <label  class="col-sm-2 control-label"> Drop-of Time:<div  ng-bind="cc.carbooking.dropofftime|date:'shortTime'"></div> </label> -->
+<!--              </div>    -->
+<!--             <div class="col-sm-6"> -->
+	  
+<!-- 	  </div> -->
+<!--             </div> -->
+<!--             <div class="col-sm-3"></div> -->
+<!--         </div> -->
+        <!--  <div class="form-group">
+            <label  class="col-sm-3 control-label"> Your Name *</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="User Name" />
+				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+		 <div class="form-group">
+            <label  class="col-sm-3 control-label">Car Name*</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="Car Name" ng-value="cc.carbooking.car1.companyname"  />
+				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+		 <div class="form-group">
+            <label  class="col-sm-3 control-label">Price*</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="price" ng-value="cc.carbooking.car1.priceofmonfri"  />
+            </div>
+            <div class="col-sm-3"></div>
+        </div>-->
+       
+		 <div class="form-group">
+            <label  class="col-sm-3 control-label">Pick-up Date*</label>
+            <div class="col-sm-6">
+                <input type="date"  class="form-control"  placeholder="Pick-up Date" ng-model="cc.customercarbooking.pickupDate" />
+				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-3 control-label">Drop-off Date*</label>
+            <div class="col-sm-6">
+                <input type="date"  class="form-control"  placeholder="Drop-off Date" ng-model="cc.customercarbooking.dropoffDate"  />
+				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-3 control-label">Pick-up time*</label>
+            <div class="col-sm-6">
+                <input type="time"  class="form-control"  placeholder="Pick-up time" ng-model="cc.customercarbooking.pickupTime" />
+				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+			 <div class="form-group">
+            <label  class="col-sm-3 control-label">Drop-off time*</label>
+            <div class="col-sm-6">
+                <input type="time"  class="form-control"  placeholder="Drop-off time" ng-model="cc.customercarbooking.dropoffTime" />
+				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+			 <div class="form-group">
+            <label  class="col-sm-3 control-label">Pickup location*</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="Pickup location" ng-model="cc.customercarbooking.pickupLocation"  />
+				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+			 <div class="form-group">
+            <label  class="col-sm-3 control-label">Drop-off location*</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="Drop-off location" ng-model="cc.customercarbooking.dropoffLocation" />
+				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+			
+				 <div class="form-group">
+            <label  class="col-sm-3 control-label">Do you need driver*</label>
+            <div class="col-sm-6">
+                <input toggle-checkbox ng-model="cc.customercarbooking.driverRequired" type="checkbox"><br>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+			
+				 <div class="form-group">
+            <label  class="col-sm-3 control-label">Upload yourLicense/Idproof*</label>
+            <div class="col-sm-6">
+                <div class="col-sm-4">
+             <div class="vehicle_images">
+                <div class="upload_more_img">
+                <input name="upload" type="file" ngf-select="" ng-model="cc.customercarbooking.customerLicense"  ngf-accept="'image/*'"  accept="image/*"><img ngf-src="cc.customercarbooking.customerLicense" class="thumb ng-hide"></input>
+                </div>
+            </div>
+            </div>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+          
+<div class="col-sm-7"></div>
+        <input type="button" value="Next" class="btn btn-primary col-sm-offset-3" ng-click="cc.setcustomerbooking()"  /> 
+        <input type="button" value="Payment" ng-click="" class="btn" /> <br/><br/>
+		
+    </form>
+    </div>
+    
+    
+      
+    	 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.angularjs.org/1.4.7/angular.js"></script>
+     <script src="https://gitcdn.github.io/bootstrap-toggle/2.1.0/js/bootstrap-toggle.min.js"></script>
+     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+	<script
+		src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+		<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+ <script src="app.js"></script>
+   <script src="js/ng-file-upload-shim.js"></script>
+  <script src="js/ng-file-upload.js"></script>
+  <script src="js/uploadf.js"></script>
+<script src="controller/car_controller.js"></script>
+ <script src="service/carnew_service.js"></script>
+ 
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/interface.js"></script> 
+<!--Switcher-->
+<script src="switcher/js/switcher.js"></script>
+<!--bootstrap-slider-JS--> 
+<script src="js/bootstrap-slider.min.js"></script> 
+<!--Slider-JS--> 
+<script src="js/slick.min.js"></script> 
+<script src="js/owl.carousel.min.js"></script>
+ 
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head ng-app="carapp">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ui-router-extras/0.1.3/ct-ui-router-extras.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body ng-controller="CarDetailsController" class="container" > <br />
+    <h1>Car details</h1>
+	
+    <form class="form-horizontal"  role="form">
+
+	
+        <div class="form-group">
+            <label for="Company Name" class="col-sm-3 control-label">Company Name</label>
+            <div class="col-sm-6">
+			<div class="input-group">
+                 <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                <input type="text"  class="form-control" placeholder="Company Name" ng-model="car.companyname" />
+            </div>
+			</div>
+            <div class="col-sm-3"></div>
+
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-3 control-label">Car Model</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="Car Model" ng-model="car.model" />
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        
+        <div class="form-group">
+            <label for="year" class="col-sm-3 control-label">Year</label>
+           <div class="col-md-6 col-xs-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                                                <input type="date" class="form-control datepicker" value="2014-11-01" ng-model="car.year"/>                                            
+                                            </div>
+                                          
+                                        </div>
+            <div class="col-sm-7"></div>
+        </div>
+		  <div class="form-group">
+            <label  class="col-sm-3 control-label">Car No</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="Car No" ng-model="car.no" />
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        	  <div class="form-group">
+            <label  class="col-sm-3 control-label">Car Mileage</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="Car Mileage" ng-model="car.mileage" />
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+		
+		
+		
+		
+		
+			  <div class="form-group">
+            <label  class="col-sm-3 control-label">Car Color</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="Car Color" ng-model="car.color" />
+				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+			  <div class="form-group">
+            <label  class="col-sm-3 control-label">Car Capacity</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="Capacity Of Persons" ng-model="car.capacity" />
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+		
+        <div class="form-group">
+            <label for="gender" class="col-sm-3 control-label">Fuel Type</label>
+            <div class="col-sm-6">
+                <select  class="form-control" ng-model="car.fueltype">
+                    <option value="petrol">Petrol</option>
+                    <option value="diesel">Diesel</option>
+					     <option value="cng">CNG</option>
+                </select>
+            </div>
+        <div class="form-group">
+           
+            <div class="col-sm-2">
+                <span><b>CAR TYPE</b></span>
+                <div class="radio">
+                    <label><input value="online" type="radio"  ng-model="car.suv" />SUV</label>
+                </div>
+                <div class="radio">
+                    <label><input value="onsite" type="radio"  ng-model="car.hatchback" />Hatchback</label>
+                </div>
+				 <div class="radio">
+                    <label><input value="onsite" type="radio"  ng-model="car.sedan" />Sedan</label>
+                </div>
+				 <div class="radio">
+                    <label><input value="onsite" type="radio"  ng-model="car.Luxury" />Luxury</label>
+                </div>
+				
+            </div>
+			<br>
+			 <div class="col-sm-7"></div>
+     
+           <div class="col-sm-7" >
+                <span><b>Select features of your car</b></span>
+                <div class="checkbox" class="form-group">
+                    <label><input type="checkbox" ng-model="car.at" />Automatic transmission</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" ng-model="car.al" />Automatic locks</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox"  ng-model="car.ac" />AC</label>
+                </div>
+				 <div class="checkbox">
+                    <label><input type="checkbox"  ng-model="car.airbags" />Airbags</label>
+                </div>
+				 <div class="checkbox">
+                    <label><input type="checkbox"  ng-model="car.am/fm" />AM/FM radio</label>
+                </div>
+				 <div class="checkbox">
+                    <label><input type="checkbox"  ng-model="car.cdplayer" />CD player</label>
+                </div>
+				 <div class="checkbox">
+                    <label><input type="checkbox"  ng-model="car.sunroof" />Sunroof</label>
+                </div>
+				 <div class="checkbox">
+                    <label><input type="checkbox"  ng-model="car.gps" />GPS</label>
+                </div>
+            </div>
+        
+<div class="col-sm-7"></div>
+        <input type="button" value="Next" class="btn btn-primary col-sm-offset-3" ng-click="submitStudnetForm()"  /> 
+        <input type="reset" value="Reset" ng-click="resetForm()" class="btn" /> <br/>
+		
+    </form>
+    <script>
+     //1. create app module 
+        var studentApp = angular.module('carapp', ['ui.router']);
+
+        //2. create controller
+        studentApp.controller("CarDetailsController", function ($scope, $http,$location) {
+  
+            //3. attach originalStudent model object
+           $scope.car = {
+		   id:null,
+             companyname:'',
+			 model:'',
+			 year:'',
+			 no:null,
+			 mileage:'',
+			 color:'',
+			 capacity:'',
+			 fueltype:'',
+			 at:'',
+			 al:'',
+			 ac:'',
+			 airbags:'',
+			 am/fm:'',
+			 cdplayer:'',
+			 sunroof:'',
+			 gps:'',
+			 suv:'',
+			 sedan:'',
+			 luxury:'',
+			 hatchback:'',
+			 pickdate:'',
+			 picklocation:'',
+			 picktime:'',
+			 
+			 	 dropdate:'',
+			 droplocation:'',
+			 droptime:'',
+			 
+			 
+            };
+
+            //4. copy originalStudent to student. student will be bind to a form 
+            $scope.student = angular.copy($scope.originalStudent);
+
+            //5. create submitStudentForm() function. This will be called when user submits the form
+            $scope.submitStudnetForm = function () {
+       $location.path("/car1");
+			 //$location.path('F:/angular/car1.html');
+                // send $http request to save student
+
+            };
+
+            //6. create resetForm() function. This will be called on Reset button click.  
+            $scope.resetForm = function () {
+                $scope.student = angular.copy($scope.OriginalStudent);
+            };
+    });
+    </script>   
+</body>
+</html>

@@ -1,0 +1,63 @@
+<div>
+    <h1 align="center">Car Details</h1>
+	
+    <form class="form-horizontal"  role="form">	
+	  <div class="form-group">
+            <div class="col-sm-7"></div>
+        </div>
+		  <div class="form-group">
+            <label  class="col-sm-3 control-label">Car Plate Number</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="Eg:GJ-10 HQ-9999" ng-model="cc.car.carplatenumber" />
+            </div>
+			<br>
+   </div>
+			<br>
+			<div class="form-group">
+				  <label  class="col-sm-3 control-label">Car Featrurs</label>
+				  <div class="col-sm-6">
+				<div class="textarea">
+			<textarea rows="3" cols="75" placeholder="Add a basic features of car"ng-model="cc.car.cardescription" > </textarea>
+				</div>
+				</div>
+				</div>
+			<br/>
+ 				<div class="form-group">
+				<label  class="col-sm-3 control-label">Car Price</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="Price Per Day" ng-model="cc.car.price" />
+         
+            </div>
+            </div>
+			<br>
+
+				<div class="form-group">
+				<label  class="col-sm-3 control-label">Select features of your car</label>
+            <div class="col-sm-6">
+                <div class="vehicle_accessories">
+                
+                 <label><input type="checkbox" ng-model="cc.carfeature.evhybrid" id="seats" />EV/Hybrid</label>&nbsp&nbsp
+                <label><input type="checkbox" ng-model="cc.carfeature.bikerack" />Bike rack</label>&nbsp&nbsp
+                  <label><input type="checkbox"  ng-model="cc.carfeature.allwheeldrive" />All-wheel drive</label>&nbsp&nbsp
+                    <label><input type="checkbox"  ng-model="cc.carfeature.childseat" />Child seat</label>&nbsp&nbsp
+                      <label><input type="checkbox"  ng-model="cc.carfeature.snowtires" />Snow tires or chains</label><br/>
+                   <label><input type="checkbox"  ng-model="cc.carfeature.skirack" />Ski rack</label>&nbsp&nbsp
+                   <label><input type="checkbox"  ng-model="cc.carfeature.bluetooth" />Bluetooth</label>&nbsp&nbsp
+               		 <label><input type="checkbox"  ng-model="cc.carfeature.gps" />GPS</label>&nbsp&nbsp
+                	 <label><input type="checkbox"  ng-model="cc.carfeature.usbinput" />USB input</label>&nbsp&nbsp
+                	  <label><input type="checkbox"  ng-model="cc.carfeature.heatedseats" />heated seats</label>&nbsp&nbsp	
+               			 <label><input type="checkbox"  ng-model="cc.carfeature.tollpass" />Toll pass</label><br/>
+               			  <label><input type="checkbox"  ng-model="cc.carfeature.audioinput" />Audio input</label>&nbsp&nbsp
+               			  <label><input type="checkbox"  ng-model="cc.carfeature.convertible" />Convertible</label>&nbsp&nbsp
+               			    <label><input type="checkbox"  ng-model="cc.carfeature.petfriendly" />Pet friendly</label>&nbsp&nbsp
+               				  <label><input type="checkbox"  ng-model="cc.carfeature.sunroof" />Sunroof</label>
+                </div>
+         
+            </div>
+            </div>
+               <div class="col-sm-6"></div>
+			<input type="button" value="Next" class="btn btn-primary col-sm-offset-3" ng-click="cc.submit3()"  /> 
+        <input type="reset" value="Reset" ng-click="resetForm()" class="btn" /> <br/><br/>
+   </form>
+</div>
+

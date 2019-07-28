@@ -1,0 +1,129 @@
+ <html>
+ <head>
+ 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>Easy2go</title>
+<!--Bootstrap -->
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<!--Custome Style -->
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<!--OWL Carousel slider-->
+<link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+<link rel="stylesheet" href="css/owl.transitions.css" type="text/css">
+<!--slick-slider -->
+<link href="css/slick.css" rel="stylesheet">
+<!--bootstrap-slider -->
+<link href="css/bootstrap-slider.min.css" rel="stylesheet">
+<!--FontAwesome Font Style -->
+<link href="css/font-awesome.min.css" rel="stylesheet">
+ <script type='text/javascript' src='//code.jquery.com/jquery-1.8.3.js'></script> 
+<!-- SWITCHER -->
+		<link rel="stylesheet" id="switcher-css" type="text/css" href="switcher/css/switcher.css" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/red.css" title="red" media="all" data-default-color="true" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/orange.css" title="orange" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/blue.css" title="blue" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/pink.css" title="pink" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/green.css" title="green" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/purple.css" title="purple" media="all" />
+        
+<!-- Fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon-icon/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon-icon/apple-touch-icon-114-precomposed.html">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon-icon/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="images/favicon-icon/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="images/favicon-icon/favicon.png">
+<!-- Google-Font-->
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]--> 
+ </head> 
+ <section class="page-header profile_page">
+  <div class="container">
+    <div class="page-header_wrap">
+      <div class="page-heading">
+        <h1>List Of Driver</h1>
+		
+      </div>
+      <ul class="coustom-breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li>List Of Driver</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Dark Overlay-->
+  <div class="dark-overlay"></div>
+</section>
+<!-- /Page Header--> 
+ 
+ <body ng-app="myApp" ng-controller="PlaceHolderController as ctrl">
+ <form>
+ <div ng-init="ctrl.fetchAllPlaceholders()"></div>
+ <div class="panel panel-default">
+                <!-- Default panel contents -->
+              <div class="panel-heading" ><span class="lead"><h3>List of PlaceHolder</h3></span></div>
+              <div class="tablecontainer">
+                  <table class="table table-hover">
+                      <thead>
+                          <tr>
+                                
+                              <th>placeHolderName</th>
+                              <th>address</th>
+                              <th>squarefeet</th>
+                               <th>parkingLocation</th>
+                               <th>date</th>
+                              <th>startTime</th>
+                              <th>endTime</th>
+                              <th width="20%"></th>
+                            <!--  <th>   <button type="button" ng-click="ctrl.fetchAllDrivers()" class="btn btn-success custom-width">click</button> 
+                          </th>-->
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr ng-repeat="u in ctrl.placeholders">
+                              <!--  <td><span ng-bind="u.id"></span></td>-->
+                              <td><span ng-bind="u.placeHolderName"></span></td>
+                              <td><span ng-bind="u.address"></span></td>
+                              <td><span ng-bind="u.squarefeet"></span></td>
+                              <td><span ng-bind="u.parkingLocation"></span></td>
+                               <td><span ng-bind="u.startTime|date:'shortDate'"></span></td>
+                              <td><span ng-bind="u.startTime|date:'shortTime'"></span></td>
+                               <td><span ng-bind="u.endTime|date:'shortTime'"></span></td>
+                 
+                                    <td> <button type="button" class="btn btn-success custom-width">Book Place</button></td>
+                                     <td> <button type="button" class="btn btn-success custom-width">View Place</button></td>
+                              <td>
+                            <!--   <button type="button" ng-click="ctrl.getAllUsers()" class="btn btn-success custom-width">click</button> -->
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+ </div>
+ 
+</form>
+ </body>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script
+		src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+   <!--  <script src="example.js"></script> 
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+
+ <script src="app.js"></script>
+    <script src="js/ng-file-upload-shim.js"></script>
+  <script src="js/ng-file-upload.js"></script>
+  <script src="js/uploadf.js"></script>
+<script src="controller/placeholder_controller.js"></script>
+ <script src="service/placeholder_service.js"></script>
+      </html>

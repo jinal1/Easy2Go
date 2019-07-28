@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!-- Mirrored from themes.webmasterdriver.net/carforyou/demo/listing-classic.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Nov 2017 00:56:11 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>Easy2Go</title>
+<!--Bootstrap -->
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<!--Custome Style -->
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<!--OWL Carousel slider-->
+<link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+<link rel="stylesheet" href="css/owl.transitions.css" type="text/css">
+<!--slick-slider -->
+<link href="css/slick.css" rel="stylesheet">
+<!--bootstrap-slider -->
+<link href="css/bootstrap-slider.min.css" rel="stylesheet">
+<!--FontAwesome Font Style -->
+<link href="css/font-awesome.min.css" rel="stylesheet">
+
+<!-- SWITCHER -->
+		<link rel="stylesheet" id="switcher-css" type="text/css" href="switcher/css/switcher.css" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/red.css" title="red" media="all" data-default-color="true" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/orange.css" title="orange" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/blue.css" title="blue" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/pink.css" title="pink" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/green.css" title="green" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/purple.css" title="purple" media="all" />
+        
+<!-- Fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon-icon/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon-icon/apple-touch-icon-114-precomposed.html">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon-icon/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="images/favicon-icon/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="images/favicon-icon/favicon.png">
+<!-- Google-Font-->
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->  
+</head>
+<body>  
+<!--Page Header-->
+<section class="page-header listing_page">
+  <div class="container">
+    <div class="page-header_wrap">
+      <div class="page-heading">
+        <h1>Parking Listing</h1>
+      </div>
+      <ul class="coustom-breadcrumb">
+        <li><a href="customer.html">Home</a></li>
+        <li>Parking Listing</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Dark Overlay-->
+  <div class="dark-overlay"></div>
+</section>
+<!-- /Page Header--> 
+<form ng-app="myApp"  ng-controller="PlaceHolderController as ctrl">		
+   <div ng-init="ctrl.fetchAllPlaceholders()"></div>
+<!--Listing-->
+<section class="listing-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 col-md-push-3">
+     
+        <div ng-repeat="u in ctrl.placeholders">
+              
+        <div class="product-listing-m gray-bg">
+          <div class="product-listing-img"> <a href="#"><img ng-src="{{u.parkingPhoto}}" class="img-responsive" alt="Image" /> </a>
+           
+            <div class="compare_item">
+              <div class="checkbox">
+               
+                <label for="compare22"></label>
+              </div>
+            </div>
+          </div>
+          <div class="product-listing-content">
+            <h1><li><i class="fa fa-user" aria-hidden="true"></i>{{u.placeHolderName}} </li></h1>
+            <p class="list-price">{{u.price}}</p>
+            <p>					
+						
+            </p>
+            <ul>
+              <li><i class="fa fa-road" aria-hidden="true"></i>{{u.address}}</li>
+              <li><i class="fa fa-road" aria-hidden="true"></i>{{u.parkingLocation}}</li>
+              <li><i class="fa fa-calendar" aria-hidden="true"></i>{{u.startTime|date:'shortDate'}}</li>
+              <li><i class="fa fa-calendar" aria-hidden="true"></i>{{u.startTime|date:'shortTime'}}</li>
+               <li><i class="fa fa-calendar" aria-hidden="true"></i>{{u.endTime|date:'shortTime'}}</li>
+          
+         
+            </ul>
+            <a href="securityparking.html?price={{u.price}}&placeHolderId={{u.placeHolderId}}" class="btn">Book Place <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+           
+          </div>
+        </div>
+        </div>
+           
+       
+         <pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize" ng-change="pageChanged()" class="pagination-sm" items-per-page="itemsPerPage"></pagination>
+      </div>
+      
+      <!--Side-Bar-->
+      <aside class="col-md-3 col-md-pull-9">
+        <div class="sidebar_widget">
+          <div class="widget_heading">
+            <h5><i class="fa fa-filter" aria-hidden="true"></i> Find Your Parking Place</h5>
+          </div>
+          <div class="sidebar_filter">
+            <form action="#" method="get">
+            <span ><b>Select Your Location</b></span><br/>
+              <div class="form-group select">
+                <select class="form-control" ng-model="address" placeholder="Select Location">
+                  <option>Baroda</option>
+                  <option>Ahmdabad</option>
+                  <option>Surat</option>
+                  <option>Bombay</option>
+                  <option>Delhi</option>
+                  <option>Kolkata</option>
+                  <option>Chennai</option>
+                </select>
+              </div>
+              <span ><b>Select Parking Area</b></span><br/>
+              <div class="form-group ">
+               <input  class="form-control" type="text" name="parkingarea" id="parkingarea" ng-model="parkingLocation">
+              </div>
+                <span ><b>Select Pick-Up Time</b></span><br/>
+              <div class="form-group">
+                <input type="datetime-local" class="form-control" ng-model="startTime">
+                                 
+              </div>
+              <span ><b>Select Drop-off Time</b></span><br/>
+              <div class="form-group">
+                <input type="datetime-local" class="form-control" ng-model="endTime">
+                                 
+              </div>
+              
+               <br/>
+
+              <div class="form-group">
+                <button   class="btn btn-block" ng-click="ctrl.getfilterparking()"><i class="fa fa-search" aria-hidden="true"></i> Search Parking Area</button>
+              
+              </div>
+            </form>
+             </form>
+          </div>
+        </div>
+   
+      </aside>
+      <!--/Side-Bar--> 
+    </div>
+  </div>
+</section>
+<!-- /Listing--> 
+
+<!--Brands-->
+<section class="brand-section gray-bg">
+  <div class="container">
+    <div class="brand-hadding">
+      <h5>Popular Brands</h5>
+    </div>
+    <div class="brand-logo-list">
+      <div id="popular_brands">
+        <div><a href="#"><img src="images/brand-logo-1.png" class="img-responsive" alt="image"></a></div>
+        <div><a href="#"><img src="images/brand-logo-2.png" class="img-responsive" alt="image"></a></div>
+        <div><a href="#"><img src="images/brand-logo-3.png" class="img-responsive" alt="image"></a></div>
+        <div><a href="#"><img src="images/brand-logo-4.png" class="img-responsive" alt="image"></a></div>
+        <div><a href="#"><img src="images/brand-logo-5.png" class="img-responsive" alt="image"></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Brands--> 
+
+
+<!--Footer -->
+<footer>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-push-6 text-right">
+        </div>
+        <div class="col-md-6 col-md-pull-6">
+          <p class="copy-right">Copyright &copy; 2017 Easy2Go. All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- /Footer--> 
+
+<!--Back to top-->
+<div id="back-top" class="back-top"> <a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i> </a> </div>
+<!--/Back to top--> 
+
+
+<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script
+		src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+		 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+		<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+		
+	<script src="app.js"></script>
+	
+  
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+	<script src="controller/car_controller.js"></script>
+	<script src="service/carnew_service.js"></script>
+	 <script src="js/ng-file-upload-shim.js"></script>
+  <script src="js/ng-file-upload.js"></script>
+  <script src="js/uploadf.js"></script>
+<!-- Scripts --> 
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/interface.js"></script> 
+<!--Switcher-->
+<script src="switcher/js/switcher.js"></script>
+<!--bootstrap-slider-JS--> 
+<script src="js/bootstrap-slider.min.js"></script> 
+<!--Slider-JS--> 
+<script src="js/slick.min.js"></script> 
+<script src="js/owl.carousel.min.js"></script>
+<script src="controller/placeholder_controller.js"></script>
+ <script src="service/placeholder_service.js"></script>
+</body>
+
+<!-- Mirrored from themes.webmasterdriver.net/carforyou/demo/listing-classic.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Nov 2017 00:56:11 GMT -->
+</html>

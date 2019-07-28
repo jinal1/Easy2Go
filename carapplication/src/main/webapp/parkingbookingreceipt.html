@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<!--Custome Style -->
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<!--OWL Carousel slider-->
+<link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+<link rel="stylesheet" href="css/owl.transitions.css" type="text/css">
+<!--slick-slider -->
+<link href="css/slick.css" rel="stylesheet">
+<!--bootstrap-slider -->
+<link href="css/bootstrap-slider.min.css" rel="stylesheet">
+<!--FontAwesome Font Style -->
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" id="switcher-css" type="text/css" href="switcher/css/switcher.css" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/red.css" title="red" media="all" data-default-color="true" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/orange.css" title="orange" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/blue.css" title="blue" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/pink.css" title="pink" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/green.css" title="green" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/purple.css" title="purple" media="all" />
+         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+   
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+     <link href="https://gitcdn.github.io/bootstrap-toggle/2.1.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+   
+</head>
+<body>
+	<!--Page Header-->
+	
+	<body>
+	<!--Page Header-->
+	<section class="page-header profile_page">
+		<div class="container">
+			<div class="page-header_wrap">
+				<div class="page-heading">
+					<h1>Booking Receipt</h1>
+				</div>
+				<ul class="coustom-breadcrumb">
+					<li><a href="customer.html">Home</a></li>
+					<li>Booking Receipt</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Dark Overlay-->
+		<div class="dark-overlay"></div>
+	</section>
+<div>
+	
+<div>
+    <h2 align="center">Parking Booking Receipt</h2>
+	
+    <form class="form-horizontal" ng-app="myApp" ng-controller="accountcontroller as cc" role="form">	
+	<div ng-init="cc.getparkingreceipt()"></div>
+	  <!--  <button ng-click="cc.getbookingdata()">Click here for booking data</button>-->
+	
+
+		
+		 
+		 <div class="form-group">
+            <label  class="col-sm-3 control-label">Car name</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="Car Name" ng-model="carname" ng-disabled="true"/>
+				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+		 
+		 
+		 
+		 <div class="form-group">
+            <label  class="col-sm-3 control-label">Location</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="Area Name" ng-model="cc.CustomerParkingBooking.location" ng-disabled="true" />
+				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+		 <div class="form-group">
+            <label  class="col-sm-3 control-label">Date</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="Pick-up Date" ng-model="cc.CustomerParkingBooking.pickupDate" ng-disabled="true"/>
+				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+       
+		 
+       
+        <div class="form-group">
+            <label  class="col-sm-3 control-label">Pick-up time</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="Pick-up time" ng-value="cc.CustomerParkingBooking.pickupTime" ng-disabled="true"/>
+				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+			 <div class="form-group">
+            <label  class="col-sm-3 control-label">Drop-off time</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="Drop-off time" ng-value="cc.CustomerParkingBooking.dropoffTime" ng-disabled="true" />
+				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+			 
+           <div class="form-group">
+            <label  class="col-sm-3 control-label">total price</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="total price" ng-model="cc.CustomerParkingBooking.totalprice" ng-disabled="true"/>
+				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+			
+            <div class="col-sm-3"></div>
+        </div>
+          
+<div class="col-sm-7"></div>
+<br>
+<br>
+
+<br>
+
+
+        <input type="button" value="Print Receipt" class="btn btn-primary col-sm-offset-3" ng-click="cc.setcustomerbooking()"  /> 
+       <br/>
+		
+    </form>
+    </div>
+    
+    
+      
+    	 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.angularjs.org/1.4.7/angular.js"></script>
+     <script src="https://gitcdn.github.io/bootstrap-toggle/2.1.0/js/bootstrap-toggle.min.js"></script>
+     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+	<script
+		src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+		<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+ <script src="app.js"></script>
+   <script src="js/ng-file-upload-shim.js"></script>
+  <script src="js/ng-file-upload.js"></script>
+  <script src="js/uploadf.js"></script>
+<script src="controller/account_controller.js"></script>
+ <script src="service/account_service.js"></script>
+ 
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/interface.js"></script> 
+<!--Switcher-->
+<script src="switcher/js/switcher.js"></script>
+<!--bootstrap-slider-JS--> 
+<script src="js/bootstrap-slider.min.js"></script> 
+<!--Slider-JS--> 
+<script src="js/slick.min.js"></script> 
+<script src="js/owl.carousel.min.js"></script>
+ 
+</body>
+</html>

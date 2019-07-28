@@ -1,0 +1,451 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!-- Mirrored from themes.webmasterdriver.net/carforyou/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Nov 2017 00:54:47 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>Easy2go</title>
+<!--Bootstrap -->
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<!--Custome Style -->
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<!--OWL Carousel slider-->
+<link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+<link rel="stylesheet" href="css/owl.transitions.css" type="text/css">
+<!--slick-slider -->
+<link href="css/slick.css" rel="stylesheet">
+<!--bootstrap-slider -->
+<link href="css/bootstrap-slider.min.css" rel="stylesheet">
+<!--FontAwesome Font Style -->
+<link href="css/font-awesome.min.css" rel="stylesheet">
+ <script type='text/javascript' src='//code.jquery.com/jquery-1.8.3.js'></script> 
+<!-- SWITCHER -->
+		<link rel="stylesheet" id="switcher-css" type="text/css" href="switcher/css/switcher.css" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/red.css" title="red" media="all" data-default-color="true" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/orange.css" title="orange" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/blue.css" title="blue" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/pink.css" title="pink" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/green.css" title="green" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="switcher/css/purple.css" title="purple" media="all" />
+        
+<!-- Fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon-icon/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon-icon/apple-touch-icon-114-precomposed.html">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon-icon/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="images/favicon-icon/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="images/favicon-icon/favicon.png">
+<!-- Google-Font-->
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]--> 
+
+
+     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"></link>
+     <link href="css/app.css" rel="stylesheet"></link> -->
+</head>
+ <style>
+  .full button span
+   {
+    background-color: limegreen;
+    border-radius: 32px;
+    color: black;
+  }
+  .partially button span {
+    background-color: orange;
+    border-radius: 32px;
+    color: black;
+  }
+  .show_error{
+  color: red;
+  }
+</style>
+<body>
+
+<!--Page Header-->
+<section class="page-header profile_page">
+  <div class="container">
+    <div class="page-header_wrap">
+      <div class="page-heading">
+        <h1>Driver Detail</h1>
+		
+      </div>
+      <ul class="coustom-breadcrumb">
+        <li><a href="customer.html">Home</a></li>
+        <li>Driver Details</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Dark Overlay-->
+  <div class="dark-overlay"></div>
+</section>
+<!-- /Page Header--> 
+
+<div>
+    <h2 align="center">Driver Details</h2><br/>
+	
+    <div class="form-horizontal"  role="form" ng-app="myApp" ng-controller="DriverController as dc">	
+	<form  method="post">
+      <div ng-form="myform">
+	  <div class="form-group">
+	   <div class="form-group">
+            
+       <div class="col-sm-1"></div>  
+           <label for="Company Name" class="col-sm-3 control-label">Driver's Name </label>
+            <div class="col-sm-4">
+                <input type="text"  class="form-control" id="drivername" name="drivername"  ng-required="true" ng-pattern="/^[a-zA-Z]*$/"   placeholder="Driver's Name " ng-model="dc.driver.drivername" />
+				  <span class="show_error"  ng-show="myform.drivername.$dirty && myform.drivername.$error.required">This is a required field</span>
+   				   <span class="show_error" ng-show="myform.drivername.$dirty && myform.drivername.$error.pattern">Enter valid name.</span>
+            
+				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+           
+         <div class="form-group">
+            
+       <div class="col-sm-1"></div>  
+           <label for="Company Name" class="col-sm-3 control-label">Driver's Experience</label>
+            <div class="col-sm-4">
+               <input type="text"  class="form-control" id="experience" name="experience"  ng-required="true"  placeholder="Driver's Experience in months" ng-model="dc.driver.experience" />
+				  <span class="show_error"  ng-show="myform.experience.$dirty && myform.experience.$error.required">This is a required field</span>
+   				   
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+           
+	   <div class="form-group">
+             <div class="col-sm-1"></div>  
+           <label for="Company Name" class="col-sm-3 control-label">Upload IdProof ( size = 900 x 560 )</label>
+            <div class="col-sm-4">
+             <div class="vehicle_images">
+                <div class="upload_more_img">
+                <input name="upload" type="file" ngf-select=""  name="id_proof" id="id_prrof" ng-model="dc.driver.license"  ngf-accept="'image/*'"  ng-required="true" accept="image/*"><img ngf-src="dc.driver.license" class="thumb ng-hide"></input>
+                  </div>
+                   <div> <span class="show_error"  ng-show="myform.license.$dirty && myform.license.$error.required">Id proof is required.</span>
+                
+                </div>
+            </div>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <div class="form-group">
+               <div class="col-sm-1"></div>  
+           <label for="Company Name" class="col-sm-3 control-label">Price</label>
+            <div class="col-sm-4">
+              <input type="number"  class="form-control" id="price" name="price"  placeholder="Price Per Day" ng-model="dc.driver.price" ng-minlength="3"  ng-maxlength="4" ng-required="true"  />
+				  <span class="show_error"  ng-show="myform.price.$dirty && myform.price.$error.required">This is a required field</span>
+				   <span class="show_error" ng-show="myform.price.$dirty && myform.price.$error.minlength">Minimum length is 3 digit.</span>       
+		 	         <span class="show_error" ng-show="myform.price.$dirty && myform.price.$error.maxlength">Maximum length is 4 digit.</span>            
+	                				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+		
+       <div class="form-group">
+        <div class="col-sm-1"></div>  
+            <label class="col-sm-3 control-label">Vehicle Type</label>
+            <div class="col-sm-4">
+                <select  class="form-control" ng-model="dc.driver.vehicalType">
+                <option value="">Select</option>
+                    <option value="Car">Car</option>
+ <option value="SUV">SUV</option>
+ <option value="Hatchback">Hatchback</option>
+ <option value="Sedan">Sedan</option>
+ <option value="Luxurys">Luxury</option>
+
+
+</select>
+</div>
+</div>
+     
+ <div class="form-group">
+   <div class="col-sm-1"></div> 
+            <label  class="col-sm-3 control-label">Pick up Date</label>
+            <div class="col-sm-4">
+		 <div class="input-group bootstrap-timepicker timepicker">
+            <input id="pick_time" type="date" class="form-control" ng-model="dc.driver.startDate" min="{{date | date:'yyyy-MM-dd'}}">{{dc.driver.startdate}}
+            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+        </div>
+        </div>
+        </div>
+             
+ <div class="form-group">
+   <div class="col-sm-1"></div> 
+            <label  class="col-sm-3 control-label">Drop Off Date</label>
+            <div class="col-sm-4">
+		 <div class="input-group bootstrap-timepicker timepicker">
+            <input id="drop_time" type="date"  class="form-control" ng-model="dc.driver.endDate" min=" {{date | date:'yyyy-MM-dd'}}">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+        </div>
+        </div>
+        </div>
+<div class="col-sm-7"></div>
+        <input type="button" value="submit" class="btn btn-primary col-sm-offset-3" ng-click="dc.submitdriver()"  /> <br/><br/>
+        <div class="col-sm-7"></div>
+           <a href="Accountopd.html"  class="btn btn-primary col-sm-offset-3"  > give account details</a>
+        
+        
+            <div class="col-lg-12 col-sm-12 col-xs-12 alert alert-success" ng-show="successMessagebool">
+        <strong>{{successMessage }}</strong>
+</div>
+      </form>
+    </div>
+   </div>
+  
+  
+<!--Footer -->
+<footer>
+               
+              
+  
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-push-6 text-right">
+          <div class="footer_widget">
+           <!-- <p>Download Our APP:</p>
+            <ul>
+              <li><a href="#"><i class="fa fa-android" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-apple" aria-hidden="true"></i></a></li>
+            </ul>-->
+          </div>
+          <div class="footer_widget">
+            <p>Connect with Us:</p>
+            <ul>
+              <!--<li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>-->
+              <li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
+             <!-- <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>-->
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-md-pull-6">
+          <p class="copy-right">Copyright &copy; 2017 Easy2Go. All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- /Footer--> 
+
+<!--Back to top-->
+<div id="back-top" class="back-top"> <a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i> </a> </div>
+<!--/Back to top--> 
+
+<!--Login-Form -->
+<div class="modal fade" id="loginform">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Login</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="login_wrap">
+            <div class="col-md-12 col-sm-12">
+              <form action="/login"   name="myForm" method="post">
+                <div class="form-group">
+                  <input type="text" class="form-control" ng-model="username"  name="username" class="username form-control input-sm"  placeholder="Username or Email address*" required ng-minlength="3">
+
+                  <span ng-show="myForm.username.$error.required">This is a required field</span>
+                                      <span ng-show="myForm.username.$error.minlength">Minimum length required is 3</span>
+                                      <span ng-show="myForm.username.$invalid">This field is invalid </span>
+                                  </div>
+                                  
+                <div class="form-group">
+                  <input type="password" class="form-control"  name="password" placeholder="Password*" required ng-minlength="3">
+                    <span ng-show="myForm.password.$error.required">This is a required field</span>
+                                      <span ng-show="myForm.password.$error.minlength">Minimum length required is 3</span>
+                                      <span ng-show="myForm.password.$invalid">This field is invalid </span>
+                </div>
+               <!-- <div class="form-group checkbox">
+                  <input type="checkbox" id="remember">
+                  <label for="remember">Remember Me</label>
+                </div>-->
+                <div class="form-group">
+                  <input type="submit" value="Login" class="btn btn-block">
+                </div>
+              </form>
+            </div>
+		
+           <!-- <div class="col-md-6 col-sm-6">
+              <h6 class="gray_text">Login the Quick Way</h6>
+              <a href="#" class="btn btn-block facebook-btn"><i class="fa fa-facebook-square" aria-hidden="true"></i> Login with Facebook</a> <a href="#" class="btn btn-block twitter-btn"><i class="fa fa-twitter-square" aria-hidden="true"></i> Login with Twitter</a> <a href="#" class="btn btn-block googleplus-btn"><i class="fa fa-google-plus-square" aria-hidden="true"></i> Login with Google+</a> </div>
+            <div class="mid_divider"></div>-->
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer text-center">
+        <p>Don't have an account? <a href="#signupform" data-toggle="modal" data-dismiss="modal">Signup Here</a></p>
+        <p><a href="#forgotpassword" data-toggle="modal" data-dismiss="modal">Forgot Password ?</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/Login-Form --> 
+
+<!--Register-Form -->
+<div class="modal fade" id="signupform"  ng-app="myApp" ng-controller="Signupcontroller as sc">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Sign Up</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="signup_wrap">
+            <div class="col-md-12 col-sm-12">
+              <form  method="get" name="myForm1">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Full Name *"   name="username" ng-model="sc.user.username" required ng-minlength="3">
+                  
+                  <span style="color:red" ng-show="myForm1.username.$dirty && myForm1.username.$invalid"></span>
+<!--  <span ng-show="myForm1.username.$error.required">Username is required.</span>-->
+ <span  style= "color:red" ng-show="myForm1.username.$error.minlength">Minimum Length Required is 3</span>
+ <!--  <span ng-show="myForm1.username.$invalid">This field is invalid </span>-->
+
+                </div>
+                <div class="form-group">
+ <input type="email" class="form-control" placeholder="Email Address *" name="emailid"  ng-model="sc.user.emailid" required>
+                  
+<!-- <span ng-show="myForm1.emailid.$error.required">email is required.</span>  -->
+ <span style= "color:red" ng-show="myForm1.emailid.$error.email">Invalid Email Address.</span>
+ <!--  <span ng-show="myForm1.emailid.$error.minlength">Minimum length required is 3</span>
+ <span ng-show="myForm1.emailid.$invalid">This field is invalid </span>-->
+                  
+                </div>
+                
+                <div  class="form-group">
+                
+                
+                <input type="number"  class="form-control" placeholder="Mobile Number *" name="mobilenumber" ng-model="sc.user.mobilenumber" required ng-minlength="10" ng-maxlength="10"/>
+                
+      <!--   <span ng-show="myForm1.mobilenumber.$error.required">mobile number
+         is required.</span> -->
+
+ <span  style= "color:red " ng-show="myForm1.mobilenumber.$error.minlength">Minimum Length Required is 10</span>
+  <span style= "color:red " ng-show="myForm1.mobilenumber.$error.maxlength">Maximum Length Required is 10</span>
+<!--  <span ng-show="myForm1.mobilenumber.$invalid">This field is invalid </span> -->         
+                
+                
+                </div>
+                
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Password *" name="password" ng-model="sc.user.password" required ng-minlength="5"  >
+                  
+                  
+              <!--   <span ng-show="myForm1.password.$error.required">password is required.</span>-->
+
+ <span  style= "color:red " ng-show="myForm1.password.$error.minlength">Minimum length required is 5 </span>
+ 
+ <!--  <span ng-show="myForm1.password.$invalid">This field is invalid </span> -->
+                  
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Confirm Password *"  ng-model="sc.user.confirmpassword">
+                </div>
+               <!-- <div class="form-group checkbox">
+                  <input type="checkbox" id="terms_agree">
+                  <label for="terms_agree">I Agree with <a href="#">Terms and Conditions</a></label>
+                </div>-->
+                <div class="form-group">
+                  <input type="button" value="Sign Up"  class="btn btn-block" ng-click="sc.submituser()">
+                </div>
+              </form>
+            </div>
+            <!--<div class="col-md-6 col-sm-6">
+              <h6 class="gray_text">Login the Quick Way</h6>
+              <a href="#" class="btn btn-block facebook-btn"><i class="fa fa-facebook-square" aria-hidden="true"></i> Login with Facebook</a> <a href="#" class="btn btn-block twitter-btn"><i class="fa fa-twitter-square" aria-hidden="true"></i> Login with Twitter</a> <a href="#" class="btn btn-block googleplus-btn"><i class="fa fa-google-plus-square" aria-hidden="true"></i> Login with Google+</a> </div>
+            <div class="mid_divider"></div>-->
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer text-center">
+        <p>Already got an account? <a href="#loginform" data-toggle="modal" data-dismiss="modal">Login Here</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/Register-Form --> 
+
+<!--Forgot-password-Form -->
+<div class="modal fade" id="forgotpassword">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Password Recovery</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="forgotpassword_wrap">
+            <div class="col-md-12">
+              <form action="#" method="get">
+                <div class="form-group">
+                  <input type="email" class="form-control" placeholder="Your Email address*">
+                </div>
+                <div class="form-group">
+                  <input type="submit" value="Reset My Password" class="btn btn-block">
+                </div>
+              </form>
+              <div class="text-center">
+                <p class="gray_text">For security reasons we don't store your password. Your password will be reset and a new one will be send.</p>
+                <p><a href="#loginform" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-double-left" aria-hidden="true"></i> Back to Login</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/Forgot-password-Form --> 
+
+<!-- Scripts --> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script
+		src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+   <!--  <script src="example.js"></script> 
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+
+ <script src="app.js"></script>
+    <script src="js/ng-file-upload-shim.js"></script>
+  <script src="js/ng-file-upload.js"></script>
+  <script src="js/uploadf.js"></script>
+<script src="controller/driver_controller.js"></script>
+ <script src="service/driver_service.js"></script>
+  
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/interface.js"></script> 
+<!--Switcher-->
+<script src="switcher/js/switcher.js"></script>
+<!--bootstrap-slider-JS--> 
+<script src="js/bootstrap-slider.min.js"></script> 
+<!--Slider-JS--> 
+<script src="js/slick.min.js"></script> 
+<script src="js/owl.carousel.min.js"></script>
+ 
+ 
+ 
+</body>
+
+<!-- Mirrored from themes.webmasterdriver.net/carforyou/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Nov 2017 00:55:45 GMT -->
+</html>

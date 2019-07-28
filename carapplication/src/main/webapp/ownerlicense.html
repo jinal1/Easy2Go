@@ -1,0 +1,174 @@
+<!--<!DOCTYPE html>
+<html>
+<head ng-app="carapp">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ui-router-extras/0.1.3/ct-ui-router-extras.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body ng-controller="CarDetailsController" class="container" > <br />
+    <h1>Driver's Licence </h1><br/>
+<h4> Please provide your driver's licence information</h4>
+<br/>
+	
+    <form class="form-horizontal"  role="form">	
+	  <div class="form-group">
+            <label  class="col-sm-3 control-label">Driver's licence number</label>
+            <div class="col-sm-6">
+			<div class="input-group">
+                 <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                <input type="text"  class="form-control" placeholder="Location" ng-model="cc.license.licensenumber" />
+            </div>
+			</div>
+            <div class="col-sm-3"></div>
+
+        </div>
+        
+       
+        
+        <div class="form-group">
+            <label for="year" class="col-sm-3 control-label">Date of Birth</label>
+           <div class="col-md-6 col-xs-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                                                <input type="date" class="form-control datepicker" value="2014-11-01" ng-model="cc.license.dateofbirth"/>                                            
+                                            </div>
+                                          
+                                        </div>
+            <div class="col-sm-7"></div>
+        </div>
+		  <div class="form-group">
+            <label  class="col-sm-3 control-label">First Name</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="firstname" ng-model="cc.license.firstname" />
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        	  <div class="form-group">
+            <label  class="col-sm-3 control-label">Middle name</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="middlename" ng-model="cc.license.middlename" />
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+		
+		
+		
+		
+		
+			  <div class="form-group">
+            <label  class="col-sm-3 control-label">Last name</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="lastname" ng-model="cc.license.lastname" />
+				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+		
+		
+        <div class="form-group">
+            <label for="gender" class="col-sm-3 control-label">Issuing State</label>
+            <div class="col-sm-6">
+                <select  class="form-control" ng-model="cc.license.issuingstate">
+                   
+      
+                 <option value="Andra Pradesh">Andra Pradesh</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Bihar">Bihar</option>
+<option value="Madya Pradesh">Madya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>Haryana
+<option value="Delhi">Delhi</option>
+<option value="Banglore">Banglore</option>
+                </select>
+            </div>
+       </div>
+      
+
+       
+     
+        
+<div class="col-sm-7"></div>
+        <input type="button" value="Next" class="btn btn-primary col-sm-offset-3" ng-click="cc.submit1()"  /> 
+        <input type="reset" value="Reset" ng-click="resetForm()" class="btn" /> <br/>
+		
+    </form>
+   
+</body>
+</html>-->
+
+ <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+ <style>
+ .show_error{
+  color: red;
+ }
+ </style>
+ 
+
+<div>
+    <h2 align="center">Licence details</h2>
+	
+    <form class="form-horizontal"  role="form">	
+	
+	  
+	   <div class="form-group">
+            <label  class="col-sm-3 control-label">Driver's licence number</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="License number" ng-model="cc.license.licensenumber" />
+				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+	  
+           <!-- <div class="col-sm-6"></div>-->
+			
+ <div class="form-group">
+            <label  class="col-sm-3 control-label">Date Of Birth</label>
+			<div class="col-md-6">
+        <p class="input-group">
+        <div class="input-group date">
+  <input type="date" class="form-control"  ng-model="cc.license. dateofbirth" ><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+        </p>
+       
+      </div>
+       <div class="col-sm-3"></div>
+       </div>
+        </div>
+		 <div class="form-group">
+            <label  class="col-sm-3 control-label">First Name</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="First Name"  name="firstname" id="firstname"ng-model="cc.license.firstname" ng-required="true" />
+                   <span class="show_error"  ng-show="myform.firstname.$dirty && myform.firstname.$error.required">This is a required field<sup>*</sup></span>
+				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+		 <div class="form-group">
+            <label  class="col-sm-3 control-label">Middle Name</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="Middle Name" ng-model="cc.license.middlename" />
+				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+		 <div class="form-group">
+            <label  class="col-sm-3 control-label">Last Name</label>
+            <div class="col-sm-6">
+                <input type="text"  class="form-control"  placeholder="Last Name" ng-model="cc.license.lastname" />
+				
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+			
+          
+<div class="col-sm-7"></div>
+        <input type="button" value="Next" class="btn btn-primary col-sm-offset-3" ng-click="cc.submit1()"  /> 
+        <input type="reset" value="Reset" ng-click="resetForm()" class="btn" /> <br/><br/>
+		
+    </form>
+    </div>
+</body>
+</html>
